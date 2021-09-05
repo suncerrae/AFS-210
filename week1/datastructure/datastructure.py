@@ -1,7 +1,6 @@
 from enum import Enum
 
-
-class Countries(Enum):
+class countries(Enum):
     Afghanistan = 93
     Albania = 355
     Algeria = 213
@@ -9,5 +8,5 @@ class Countries(Enum):
     Angola = 244
     Antarctica = 672
 
-for a in Countries:
-    print(a.name + ' = '+ str(a.value))
+for country in countries: 
+    print(country.name + " = " + str(country.value))

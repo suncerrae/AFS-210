@@ -1,16 +1,18 @@
 from collections import defaultdict
-classes = (
-    ('VII', 1),
+romanLetters = (
     ('V', 1),
-    ('V', 2),
     ('VI', 1),
+    ('V', 2),
     ('VI', 2),
     ('VI', 3),
+    ('VII', 1),
 )
 
-rollno = defaultdict(list)
+rollNumber = defaultdict(list)
 
-for cname, id in classes:
-    rollno[cname].append(id)
+for letter, num in romanLetters:
+    print("letter", letter)
+    print("num", num)
+    rollNumber[letter].append(num)
 
-print(rollno)
+print(rollNumber)
