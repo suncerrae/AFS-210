@@ -1,20 +1,18 @@
-def linear_search(values, search_for):
-    search_at = 0
-    search_res = False
 
-    while search_at < len(values) and search_res is False:
-        if values[search_at] == search_for:
-            print(str(str(values[search_at]) + " Is the current number at position " + str(search_at)))
-            search_res = True
-        else:
-            print(str(str(values[search_at]) + " Is the current number at position " + str(search_at)))
-            search_at = search_at + 1
-    
-    return search_res
-
-
-
-arrayOfItems = [56, 66, 69, 93, 32, 28, 89]
-
-print(linear_search(arrayOfItems, 56))
-print(linear_search(arrayOfItems, 57))
+def binary_search(item_list,item):
+	first = 0
+	last = len(item_list)-1
+	found = False
+	while( first<=last and not found):
+		mid = (first + last)//2
+		if item_list[mid] == item :
+			found = True
+		else:
+			if item < item_list[mid]: 
+				last = mid - 1
+			else:
+				first = mid + 1	
+	return found
+	
+print(binary_search([0,1,3,8,14,18,19,34,52], 3))
+print(binary_search([0,1,3,8,14,18,19,34,52],17))
